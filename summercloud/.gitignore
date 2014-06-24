@@ -1,0 +1,36 @@
+/*/target/
+/target
+*.*~
+/**/*.*~
+
+# netbeans
+nbproject/*
+nb-configuration.xml
+/*/nbproject/*
+/*/nb-configuration.xml
+
+
+# ignore Eclipse metadata
+.settings/
+.project
+.classpath
+
+# ignore IDEA metadata
+*.iml
+.idea/
+*.iws
+
+
+
+# ignore generated logs
+*.log
+
+# ignore generated process id files
+*.pid
+
+# ignore Apple metadata
+.DS_Store
+
+# ignore Spring IDE metadata
+.springBeans
+

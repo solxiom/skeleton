@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.solxiom</groupId>
+        <artifactId>modular</artifactId>
+        <version>${project.global.version}</version>
+    </parent>
+    <groupId>com.solxiom</groupId>
+    <artifactId>modular-mvc</artifactId>
+    <version>${project.global.version}</version>
+
+    <packaging>war</packaging>
+
+    <name>modular-mvc</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <!--<spring.version>3.1.0.RELEASE</spring.version>--> 
+        <jackson_mapper_asl.version>1.9.13</jackson_mapper_asl.version>
+        
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.solxiom</groupId>
+            <artifactId>modular-service</artifactId>
+            <version>${project.global.version}</version>
+        </dependency>
+<!--        <dependency>
+            <groupId>com.solxiom</groupId>
+            <artifactId>modular-entity</artifactId>
+            <version>${project.global.version}</version>
+        </dependency>-->
+        <!-- Spring core & mvc -->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+     
+     
+        <!-- JACKSON mapper fro json -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jackson_mapper_asl.version}</version>
+        </dependency>
+            
+
+        <!-- Servlet Spec -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>springsource-milestones</id>
+            <name>SpringSource Milestones Proxy</name>
+            <url>https://oss.sonatype.org/content/repositories/springsource-milestones</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>         
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.0.v20140526</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
